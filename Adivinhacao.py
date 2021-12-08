@@ -1,5 +1,5 @@
 print("***************************************")
-print("BEM VINDO AO JOGO DA ADVINHAÇÃO!")
+print("BEM VINDO AO JOGO DA ADIVINHAÇÃO!")
 print("***************************************", "\n")
 
 tentativas_str = input("Digite quantas tentativas você deseja para acertar o numero:")
