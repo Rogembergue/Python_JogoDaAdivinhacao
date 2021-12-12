@@ -10,7 +10,7 @@ rodadas = int(1)
 
 while(tentativas > 0):
 
-    print("Tentativa ", rodadas, " de ", total_tentativas, ". \n")
+    print("Tentativa {} de {} .".format(rodadas, total_tentativas), "\n")
     secreto = int(20)
     chute_str = input("O número secreto é... ")
     chute = int(chute_str)
