@@ -4,9 +4,7 @@ print("***************************************")
 print("BEM VINDO AO JOGO DA ADIVINHAÇÃO!")
 print("*************************************** \n")
 
-tentativas_str = input("Digite quantas tentativas você deseja para acertar o numero:")
-tentativas = int(tentativas_str)
-total_tentativas = tentativas
+total_tentativas = int(input("Digite quantas tentativas você deseja para acertar o numero:"))
 print("\n", "ATENÇÃO!!! \n", "O número a ser adivinhado está entre 1 e 100.", "\n", "****************************")
 print("\n", "VAMOS COMEÇAR!!!", "\n")
 secreto = random.randrange(1, 101)
@@ -34,7 +32,15 @@ for rodadas in range(1, total_tentativas + 1):
             print("Você errou! O número secreto é menor. \n")
             pontos_perdidos = abs(secreto - chute)
             pontos = pontos - pontos_perdidos
+            if(rodadas == total_tentativas):
+                print("O numero secreto era {}. Você fez {}".format(secreto,pontos))
+                break
         elif(maior):
             print("Você errou! O número secreto é maior. \n")
             pontos_perdidos = abs(secreto - chute)
             pontos = pontos - pontos_perdidos
+            if (rodadas == total_tentativas):
+                print("O numero secreto era {}. Você fez {}".format(secreto, pontos))
+                break
+
+print("Fim do jogo!")
